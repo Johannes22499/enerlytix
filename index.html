@@ -5,36 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enerlytix Energieberatung</title>
   <style>
+    :root {
+      --blue: #073763;
+      --blue-soft: #36546b;
+      --green: #5caf2d;
+      --background: #f3f6f8;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f3f6f8;
+      background: var(--background);
       color: #0b1f33;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       text-align: center;
+      padding: 24px;
     }
 
     .box {
-      max-width: 760px;
-      background: #ffffff;
-      padding: 48px 40px;
-      border-radius: 18px;
+      width: 100%;
+      max-width: 820px;
+      background: var(--card);
+      padding: 52px 42px;
+      border-radius: 22px;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
     }
 
+    .logo {
+      width: min(520px, 100%);
+      height: auto;
+      display: block;
+      margin: 0 auto 34px auto;
+    }
+
     h1 {
-      font-size: 38px;
-      margin: 0 0 14px 0;
+      font-size: 34px;
+      margin: 0 0 12px 0;
+      color: var(--blue);
     }
 
     h2 {
       font-size: 22px;
       font-weight: normal;
       margin: 0 0 28px 0;
-      color: #36546b;
+      color: var(--blue-soft);
     }
 
     p {
@@ -43,14 +65,31 @@
       margin: 12px 0;
     }
 
+    .services {
+      margin-top: 26px;
+      color: var(--blue-soft);
+    }
+
     .contact {
-      margin-top: 28px;
+      margin-top: 30px;
       font-weight: bold;
+      color: var(--blue);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <main class="box">
+    <img class="logo" src="enerlytix-logo.png" alt="Enerlytix Logo">
+
     <h1>Enerlytix Energieberatung</h1>
     <h2>Diese Website befindet sich aktuell im Aufbau.</h2>
 
@@ -59,8 +98,12 @@
       Batteriespeichern, Wärmepumpen und Effizienzlösungen für Privat- und Gewerbekunden.
     </p>
 
+    <p class="services">
+      Energie intelligent planen. Verbrauch senken. Wirtschaftlichkeit verbessern.
+    </p>
+
     <p class="contact">
-      Kontakt: info@enerlytix.de
+      Kontakt: <a href="mailto:info@enerlytix.de">info@enerlytix.de</a>
     </p>
   </main>
 </body>
