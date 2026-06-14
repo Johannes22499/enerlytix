@@ -3,108 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Enerlytix Energieberatung</title>
+  <meta name="description" content="Enerlytix Energieberatung befindet sich aktuell im Aufbau. Energieberatung, PV, Batteriespeicher, Wärmepumpen und Effizienzlösungen für Privat- und Gewerbekunden.">
   <style>
     :root {
       --blue: #073763;
-      --blue-soft: #36546b;
+      --blue-2: #0b4f84;
       --green: #5caf2d;
       --background: #f3f6f8;
       --card: #ffffff;
+      --text: #0b1f33;
+      --muted: #496276;
+      --border: #d9e4ec;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--background);
-      color: #0b1f33;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 24px;
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    .box {
-      width: 100%;
-      max-width: 820px;
+    header {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand-small {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.2px;
+    }
+
+    .brand-small img {
+      width: 54px;
+      height: auto;
+      display: block;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 22px 42px;
+    }
+
+    .hero {
       background: var(--card);
-      padding: 52px 42px;
-      border-radius: 22px;
+      border-radius: 26px;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+      padding: 58px 46px;
+      text-align: center;
+      border: 1px solid rgba(7, 55, 99, 0.06);
     }
 
     .logo {
       width: min(520px, 100%);
       height: auto;
       display: block;
-      margin: 0 auto 34px auto;
+      margin: 0 auto 28px;
     }
 
     h1 {
-      font-size: 34px;
-      margin: 0 0 12px 0;
+      margin: 0 0 12px;
       color: var(--blue);
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
     }
 
-    h2 {
-      font-size: 22px;
-      font-weight: normal;
-      margin: 0 0 28px 0;
-      color: var(--blue-soft);
+    .subtitle {
+      margin: 0 auto 26px;
+      color: var(--muted);
+      font-size: clamp(19px, 2.5vw, 24px);
+      max-width: 820px;
     }
 
-    p {
+    .intro {
+      margin: 0 auto;
+      max-width: 820px;
       font-size: 18px;
-      line-height: 1.6;
-      margin: 12px 0;
     }
 
-    .services {
-      margin-top: 26px;
-      color: var(--blue-soft);
+    .pill-row {
+      margin: 32px auto 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .contact {
-      margin-top: 30px;
-      font-weight: bold;
+    .pill {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 15px;
+      background: #f8fbfd;
       color: var(--blue);
+      font-weight: 600;
+      font-size: 15px;
     }
 
-    a {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      color: var(--blue);
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      margin-top: 26px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-2));
+      color: #fff;
+      border-radius: 22px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255,255,255,0.7);
+    }
+
+    .contact-box a:hover { border-bottom-color: #fff; }
+
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 22px 34px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer a {
       color: var(--blue);
       text-decoration: none;
+      margin: 0 8px;
+      font-weight: 600;
     }
 
-    a:hover {
-      text-decoration: underline;
+    footer a:hover { text-decoration: underline; }
+
+    .notice {
+      max-width: 1120px;
+      margin: 18px auto 0;
+      padding: 0 22px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav a { margin-left: 0; margin-right: 14px; display: inline-block; margin-top: 6px; }
+      .hero { padding: 38px 22px; }
+      .card-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main class="box">
-    <img class="logo" src="enerlytix-logo.png" alt="Enerlytix Logo">
+  <header>
+    <div class="brand-small">
+      <img src="enerlytix-logo.png" alt="Enerlytix Logo">
+      <span>Enerlytix Energieberatung</span>
+    </div>
+    <nav aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </header>
 
-    <h1>Enerlytix Energieberatung</h1>
-    <h2>Diese Website befindet sich aktuell im Aufbau.</h2>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="logo" src="enerlytix-logo.png" alt="Enerlytix Logo">
+      <h1 id="hero-title">Enerlytix Energieberatung</h1>
+      <p class="subtitle">Diese Website befindet sich aktuell im Aufbau.</p>
+      <p class="intro">
+        Bald finden Sie hier Informationen zu Energieberatung, PV-Anlagen, Batteriespeichern,
+        Wärmepumpen und Effizienzlösungen für Privat- und Gewerbekunden.
+      </p>
+      <div class="pill-row" aria-label="Leistungsschwerpunkte">
+        <span class="pill">Energieberatung</span>
+        <span class="pill">PV & Speicher</span>
+        <span class="pill">Wärmepumpe</span>
+        <span class="pill">Gewerbeeffizienz</span>
+        <span class="pill">Fördermittel</span>
+      </div>
+    </section>
 
-    <p>
-      Bald finden Sie hier Informationen zu Energieberatung, PV-Anlagen,
-      Batteriespeichern, Wärmepumpen und Effizienzlösungen für Privat- und Gewerbekunden.
-    </p>
+    <section id="leistungen" class="card-grid" aria-label="Leistungen">
+      <article class="card">
+        <h2>Privathaushalte</h2>
+        <p>Unterstützung bei energetischer Sanierung, PV, Speicher, Wärmepumpe und Effizienzmaßnahmen im Gebäude.</p>
+      </article>
+      <article class="card">
+        <h2>Gewerbe</h2>
+        <p>Analyse von Verbrauch, Lastprofilen und wirtschaftlichen Maßnahmen zur Senkung von Energiekosten.</p>
+      </article>
+      <article class="card">
+        <h2>Umsetzung</h2>
+        <p>Technische und wirtschaftliche Einordnung von Maßnahmen, damit Entscheidungen belastbar getroffen werden können.</p>
+      </article>
+    </section>
 
-    <p class="services">
-      Energie intelligent planen. Verbrauch senken. Wirtschaftlichkeit verbessern.
-    </p>
-
-    <p class="contact">
-      Kontakt: <a href="mailto:info@enerlytix.de">info@enerlytix.de</a>
-    </p>
+    <section id="kontakt" class="contact-box" aria-labelledby="contact-title">
+      <h2 id="contact-title">Kontakt</h2>
+      <p>Für erste Anfragen erreichen Sie Enerlytix per E-Mail.</p>
+      <p><a href="mailto:info@enerlytix.de">info@enerlytix.de</a></p>
+    </section>
   </main>
+
+  <footer>
+    <p>
+      © 2026 Enerlytix Energieberatung ·
+      <a href="impressum.html">Impressum</a> ·
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
+    <p>Diese Website verwendet keine Cookies, kein Tracking, keine externen Schriftarten und kein Kontaktformular.</p>
+  </footer>
 </body>
 </html>
